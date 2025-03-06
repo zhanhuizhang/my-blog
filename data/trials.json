@@ -1,0 +1,33 @@
+{
+  "trials": [
+    {
+      "id": "CT001",
+      "title": "抗肿瘤药物III期临床试验",
+      "phase": 3,
+      "status": "进行中",
+      "participants": 450,
+      "last_updated": "2024-03-20T09:00:00Z",
+      "endpoints": {
+        "primary": "总体生存率",
+        "secondary": ["无进展生存期", "不良反应率"]
+      }
+    },
+    {
+      "id": "CT002",
+      "title": "Amgen Phase II 减肥药临床试验",
+      "phase": 2,
+      "status": "已完成",
+      "participants": 320,
+      "last_updated": "2024-03-25T14:30:00Z",
+      "endpoints": {
+        "primary": "12周体重减轻百分比",
+        "secondary": ["安全特性","代谢指标改善"]
+      },
+      "stock_impact": {
+        "price_change": -12,
+        "analysis": "尽管达到主要终点，因市场预期过高导致股价下跌"
+      }
+    }
+  ],
+  "changelog": []
+}

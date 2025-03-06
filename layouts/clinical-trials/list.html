@@ -1,0 +1,38 @@
+{{ define "main" }}
+<div class="container">
+  <h1>临床试验追踪系统</h1>
+  {{ $trials := site.Data.trials.trials }}
+  <div class="timeline">
+    {{ range $index, $trial := $trials }}
+    <div class="timeline-item">
+      <div class="timeline-badge">{{ add $index 1 }}</div>
+      <div class="timeline-panel">
+        <h3>{{ $trial.title }}</h3>
+        <div class="trial-meta">
+          <span class="phase">阶段 {{ $trial.phase }}</span>
+          <span class="status {{ lower $trial.status }}">{{ $trial.status }}</span>
+        </div>
+        <div class="update-time">
+          最后更新：{{ time.Format "2006-01-02 15:04" $trial.last_updated }}
+        </div>
+        <div class="participants">
+          受试者人数：{{ lang.FormatNumberCustom 0 $trial.participants }}人
+        </div>
+        <div class="endpoints">
+          <h4>主要终点指标：</h4>
+          <p>{{ $trial.endpoints.primary }}</p>
+          {{ if $trial.endpoints.secondary }}
+          <h4>次要终点指标：</h4>
+          <ul>
+            {{ range $trial.endpoints.secondary }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
