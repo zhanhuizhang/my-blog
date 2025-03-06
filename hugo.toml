@@ -1,8 +1,7 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://zhanhuizhang.github.io/my-blog/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'ananke'
-publishDir = "docs"
 
 [build]
-  publishDir = "docs"
+  publishDir = 'docs'
