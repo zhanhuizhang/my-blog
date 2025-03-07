@@ -4,4 +4,4 @@ title = 'My New Hugo Site'
 theme = 'ananke'
 
 [build]
-  publishDir = 'docs'
+  publishDir = '../docs'

@@ -1,0 +1,51 @@
+/* 通用布局样式 */
+.main {
+  max-width: 760px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* 焦点文章样式 */
+.featured-article {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* 文章元数据 */
+.article-meta {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+/* 归档列表样式 */
+.article-archives {
+  column-gap: 2rem;
+}
+
+.article-archives h2 {
+  font-size: 1.2rem;
+  color: #444;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+/* 中性色系 */
+:root {
+  --text-color: #333;
+  --secondary-text: #666;
+  --border-color: #e0e0e0;
+}
+
+body {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .main {
+    padding: 0 1rem;
+  }
+}
