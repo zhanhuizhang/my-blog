@@ -2,16 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://zhanhuizhang.github.io/my-blog/</loc>
+    <loc>https://zhanhuizhang.github.io/</loc>
     <lastmod>2025-03-06T17:55:34+08:00</lastmod>
   </url><url>
-    <loc>https://zhanhuizhang.github.io/my-blog/posts/</loc>
+    <loc>https://zhanhuizhang.github.io/posts/</loc>
     <lastmod>2025-03-06T17:55:34+08:00</lastmod>
   </url><url>
-    <loc>https://zhanhuizhang.github.io/my-blog/categories/</loc>
+    <loc>https://zhanhuizhang.github.io/posts/20250307_1283047703/</loc>
   </url><url>
-    <loc>https://zhanhuizhang.github.io/my-blog/tags/</loc>
+    <loc>https://zhanhuizhang.github.io/posts/20250307_1635987260/</loc>
   </url><url>
-    <loc>https://zhanhuizhang.github.io/my-blog/clinical-trials/</loc>
+    <loc>https://zhanhuizhang.github.io/posts/20250307_1642347710/</loc>
+  </url><url>
+    <loc>https://zhanhuizhang.github.io/posts/20250307_2600563399/</loc>
+  </url><url>
+    <loc>https://zhanhuizhang.github.io/posts/20250307_3301497820/</loc>
+  </url><url>
+    <loc>https://zhanhuizhang.github.io/posts/20250307_3516347308/</loc>
+  </url><url>
+    <loc>https://zhanhuizhang.github.io/posts/20250307_3668511496/</loc>
+  </url><url>
+    <loc>https://zhanhuizhang.github.io/posts/20250307_3791158596/</loc>
+  </url><url>
+    <loc>https://zhanhuizhang.github.io/posts/20250307_4125642389/</loc>
+  </url><url>
+    <loc>https://zhanhuizhang.github.io/posts/20250307_821558500/</loc>
+  </url><url>
+    <loc>https://zhanhuizhang.github.io/posts/20250307_844367382/</loc>
+  </url><url>
+    <loc>https://zhanhuizhang.github.io/posts/20250307_995064827/</loc>
+  </url><url>
+    <loc>https://zhanhuizhang.github.io/categories/</loc>
+  </url><url>
+    <loc>https://zhanhuizhang.github.io/tags/</loc>
+  </url><url>
+    <loc>https://zhanhuizhang.github.io/clinical-trials/</loc>
   </url>
 </urlset>

@@ -1,0 +1,42 @@
+{{ define "main" }}
+<div class="adv-container">
+  <h1 class="adv-heading">Clinical Trial Updates</h1>
+  
+  <div class="adv-filter-bar">
+    <select class="adv-filter" id="phaseFilter">
+      <option value="all">All Phases</option>
+      <option value="1">Phase I</option>
+      <option value="2">Phase II</option>
+      <option value="3">Phase III</option>
+      <option value="4">Phase IV</option>
+    </select>
+  </div>
+
+  <div class="adv-grid">
+    {{ range .Pages }}
+    <div class="adv-card" data-phase="{{ .Params.trial_phase }}">
+      <div class="adv-phase phase-{{ .Params.trial_phase }}">Phase {{ .Params.trial_phase }}</div>
+      <h2 class="adv-title">{{ .Title }}</h2>
+      <div class="adv-meta">
+        <span class="adv-status {{ lower .Params.status }}">{{ .Params.status }}</span>
+        <span class="adv-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+      </div>
+      <div class="adv-sponsors">
+        {{ with .Params.sponsors }}Sponsored by: {{ delimit . ", " }}{{ end }}
+      </div>
+      <div class="adv-endpoints">
+        {{ with .Params.endpoints }}
+        <h4>Primary Endpoint:</h4>
+        <p>{{ .primary }}</p>
+        {{ if .secondary }}
+        <h4>Secondary Endpoints:</h4>
+        <ul>{{ range .secondary }}<li>{{ . }}</li>{{ end }}</ul>
+        {{ end }}
+        {{ end }}
+      </div>
+      <a href="{{ .RelPermalink }}" class="adv-link">Read More →</a>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
