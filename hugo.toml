@@ -1,7 +1,8 @@
-baseURL = 'https://zhanhuizhang.github.io/'
+baseURL = 'https://synapse.patsnap.com/blog'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'ananke'
 
 [build]
   publishDir = '../docs'
+  canonifyURLs = true

@@ -6,6 +6,11 @@
     <section class="flex-ns flex-wrap justify-around mt5">
       {{ range .Paginator.Pages }}
         <div class="relative w-100 w-30-l mb4 bg-white">
+          {{ with .Params.featured_image }}
+            <div class="bio-med-image mb3">
+              <img src="{{ . | relURL }}" alt="Featured image" class="img-shadow" />
+            </div>
+          {{ end }}
           {{ .Render "summary" }}
         </div>
       {{ end }}

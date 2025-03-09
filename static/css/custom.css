@@ -49,3 +49,40 @@ body {
     padding: 0 1rem;
   }
 }
+
+/* 生物医学特色图片样式 */
+.bio-med-image {
+  position: relative;
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.bio-med-image:before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  background-image: repeating-linear-gradient(45deg, #e0f2fe 0 2px, transparent 2px 10px);
+  z-index: -1;
+}
+
+.bio-med-image img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border: 3px solid #bae6fd;
+  transition: transform 0.3s ease;
+}
+
+.bio-med-image:hover img {
+  transform: scale(1.03);
+}
+
+/* 响应式图片高度 */
+@media (max-width: 768px) {
+  .bio-med-image img {
+    height: 200px;
+  }
+}
