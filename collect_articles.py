@@ -78,9 +78,9 @@ if __name__ == '__main__':
     df = pd.read_excel('websites.xlsx')
 print('Excel columns:', df.columns.tolist())
 try:
-    urls = df['URL'].tolist()
+    urls = df['网站链接'].tolist()
 except KeyError:
-    raise ValueError("Excel file must contain 'URL' column. Current columns: " + str(df.columns.tolist()))
+    raise ValueError("Excel文件必须包含'网站链接'列。当前列名: " + str(df.columns.tolist()))
     
     for index, url in enumerate(urls):
         logging.info(f"Processing ({index+1}/{len(urls)}): {url}")
