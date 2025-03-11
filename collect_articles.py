@@ -75,7 +75,12 @@ class ArticleCollector:
 if __name__ == '__main__':
     collector = ArticleCollector()
     
-    urls = pd.read_excel('websites.xlsx')['URL'].tolist()
+    df = pd.read_excel('websites.xlsx')
+print('Excel columns:', df.columns.tolist())
+try:
+    urls = df['URL'].tolist()
+except KeyError:
+    raise ValueError("Excel file must contain 'URL' column. Current columns: " + str(df.columns.tolist()))
     
     for index, url in enumerate(urls):
         logging.info(f"Processing ({index+1}/{len(urls)}): {url}")
