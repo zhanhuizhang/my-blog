@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/my-first-post/</loc>
+    <loc>//C:1314/Program%20Files/Git/blog/posts/my-first-post/</loc>
     <lastmod>2025-03-06T17:55:34+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>//C:1314/Program%20Files/Git/blog/</loc>
     <lastmod>2025-03-06T17:55:34+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>//C:1314/Program%20Files/Git/blog/posts/</loc>
     <lastmod>2025-03-06T17:55:34+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>//C:1314/Program%20Files/Git/blog/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>//C:1314/Program%20Files/Git/blog/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/clinical-trials/</loc>
+    <loc>//C:1314/Program%20Files/Git/blog/clinical-trials/</loc>
   </url>
 </urlset>

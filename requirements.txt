@@ -3,3 +3,5 @@ beautifulsoup4==4.12.3
 python-frontmatter==1.0.0
 markdown==3.6
 nltk==3.8.1
+pandas==2.2.2
+openpyxl==3.1.2
