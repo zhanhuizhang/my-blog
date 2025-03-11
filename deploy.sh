@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Run article collection script
-python3 collect_articles.py
+../.venv/Scripts/python.exe collect_articles.py
 
 # Build Hugo site
 hugo --minify -d ../docs
