@@ -55,17 +55,17 @@ class ArticleCollector:
             safe_title = ''.join(c if c.isalnum() else '_' for c in article['title'])[:50]
             filename = f"{datetime.now().strftime('%Y%m%d')}_{safe_title}.md"
             
-            post = frontmatter.Post(
-                article['content'],
-                title=article['title'],
-                date=datetime.now().strftime('%Y-%m-%dT%H:%M:%S+08:00'),
-                categories=article['tags'],
-                draft=False,
-                source_url=article['source_url']
-            )
+            post = frontmatter.Post(article['content'])
+            post.metadata.update({
+                'title': article['title'],
+                'date': datetime.now().strftime('%Y-%m-%dT%H:%M:%S+08:00'),
+                'categories': article['tags'],
+                'draft': False,
+                'source_url': article['source_url']
+            })
             
             with open(os.path.join(output_dir, filename), 'w', encoding='utf-8') as f:
-                f.write(f'---\n{frontmatter.dumps(post.metadata)}\n---\n\n{post.content}')
+                f.write(frontmatter.dumps(post))
             
             logging.info(f"Successfully saved: {filename}")
             
@@ -79,10 +79,18 @@ if __name__ == '__main__':
 print('Excel columns:', df.columns.tolist())
 try:
     urls = df['网站链接'].tolist()
+    logging.info(f'Found {len(urls)} URLs in Excel file')
+    if urls:
+        logging.info(f'First 3 URLs: {urls[:3]}')
+
 except KeyError:
     raise ValueError("Excel文件必须包含'网站链接'列。当前列名: " + str(df.columns.tolist()))
-    
-    for index, url in enumerate(urls):
-        logging.info(f"Processing ({index+1}/{len(urls)}): {url}")
-        if article := collector.scrape_article(url):
-            collector.save_as_markdown(article)
+
+for index, url in enumerate(urls):
+    logging.info(f"Processing ({index+1}/{len(urls)}): {url}")
+    article = collector.scrape_article(url)
+    if article:
+        logging.info(f"Successfully scraped article: {article['title']}")
+        collector.save_as_markdown(article)
+    else:
+        logging.warning(f"Failed to scrape article from: {url}")
